@@ -1,6 +1,10 @@
 <app-container>
   <app-cabecalho></app-cabecalho>
-  <app-separador> A </app-separador>
-  <app-separador> B </app-separador>
-  <app-separador> C </app-separador>
+
+  @for (letra of alfabeto; track letra) {
+  <app-separador>
+    {{ letra }}
+  </app-separador>
+  <app-contato nome="Zacarias" telefone="99 9999-9929"></app-contato>
+  }
 </app-container>
