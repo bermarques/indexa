@@ -60,7 +60,6 @@ h1 {
 .perfil {
   background: #e7f1ff;
   width: 416px;
-  height: 548px;
   padding: 24px, 16px;
   border-radius: 16px;
 }
@@ -93,6 +92,7 @@ h1 {
   justify-content: space-between;
   margin: 0 16px;
   gap: 16px;
+  padding-bottom: 32px;
 }
 
 .botao-excluir,
@@ -118,4 +118,28 @@ h1 {
   color: #ffffff;
   background-color: #0d6efd;
   cursor: pointer;
+}
+
+.imagem-perfil {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding-top: 12px;
+  padding-left: 24px;
+  margin-top: 36px;
+}
+
+.imagem-perfil img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+h2 {
+  font-family: "Montserrat";
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 33px;
+  color: #0d6efd;
+  padding-left: 12px;
 }

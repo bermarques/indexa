@@ -40,6 +40,7 @@ export class FormularioContatoComponent implements OnInit {
   inicializarFormulario() {
     this.contatoForm = new FormGroup({
       nome: new FormControl('', Validators.required),
+      avatar: new FormControl('', Validators.required),
       telefone: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
       aniversario: new FormControl(''),
@@ -65,6 +66,23 @@ export class FormularioContatoComponent implements OnInit {
       this.contatoForm.reset();
       this.router.navigateByUrl('/lista-contatos');
     });
+  }
+
+  aoSelecionarArquivo(event: any) {
+    const file: File = event.target.files[0];
+    if (file) {
+      this.lerArquivo(file);
+    }
+  }
+
+  lerArquivo(file: File) {
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (reader.result) {
+        this.contatoForm.get('avatar')?.setValue(reader.result);
+      }
+    };
+    reader.readAsDataURL(file);
   }
 
   cancelar() {
