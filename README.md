@@ -12,12 +12,17 @@ Indexa é uma aplicação simples desenvolvida em Angular que permite organizar 
 - **HTML5** - Linguagem de marcação para a estruturação do conteúdo.
 - **CSS3** - Estilos visuais para a aplicação.
 - **TypeScript** - Linguagem de programação principal usada no Angular.
+- **JSONServer** - Backend falso em JSON
 
 ## 🚀 Como Rodar o Projeto
 
 ### Pré-requisitos
 
 - **Node.js** e **npm** instalados no sistema.
+- **JSONServer**
+  ```
+   npm i -g json-server@0.17.4
+  ```
 - **Angular CLI** (caso ainda não tenha):
   ```
   npm install -g @angular/cli@17.0.3
@@ -45,8 +50,17 @@ Indexa é uma aplicação simples desenvolvida em Angular que permite organizar 
 
 4. Rode a aplicação localmente:
 
+   **Frontend**
+
    ```bash
    ng serve
+   ```
+
+   **Backend**
+
+   ```bash
+   cd ./backend
+   npm start
    ```
 
 5. Abra o navegador e acesse a URL:
